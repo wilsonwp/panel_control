@@ -75,9 +75,8 @@ class PartidosController extends Controller
       
     }
     public function setMarcador($idPartido){
-            $partidos= Partido::find($idPartido)
-                ->with('equipos','goles','resultados')
-              ->where('partidos.id',$idPartido)
+            $partidos= Partido::where('partidos.id',$idPartido)
+            ->with('equipos','goles','resultados')
               ->get();
         return  response()->json($partidos) ;
 

@@ -55,16 +55,15 @@ function mostrar4(btn){
     var route = 'http://localhost:8000/partidos/setMarcador/'+btn.value;
     
    $("#contenido").empty();
-     $("#txtLocal").val('');
-     $("#txtVisitante").val('');
    $("#id").val(btn.value);
       $.get(route,function(res){
-      $("#resultado_id").val(res[0].resultados[0].id);
-        console.log(res[0]);
+           console.log(res[0]);
+      $("#resultado_id").val(res[0].resultados.id);
+        
         $("#lblLocal").html(res[0].equipos[0].nombre_equipo);
          $("#lblVisitante").html(res[0].equipos[1].nombre_equipo);
-         $("#txtLocal").val(res[0].resultados[0].goles_local);
-         $("#txtVisitante").val(res[0].resultados[0].goles_visitante);
+         $("#txtLocal").val(res[0].resultados.goles_local);
+         $("#txtVisitante").val(res[0].resultados.goles_visitante);
         var contenido = $("#contenido");
    
              contenido.append("<tr><td>Min. "+res[0].resultados.goles_local+"</td><td>"+res[0].resultados.goles_visitante+"</td></tr>");

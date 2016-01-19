@@ -26,7 +26,6 @@ class HinchasController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -52,15 +51,17 @@ class HinchasController extends Controller
         $newUsuario->create([
             'nombre' =>$request['nombre'],
             'email'=>$request['email'],
-           'estatus' =>1,
-            'password'=> bcrypt($request['password'])
+             'estatus' =>1,
+            'password'=> bcrypt($request['password']),
+            'categoria_user_id' =>6
             ]);
         $usuarioId = $newUsuario->all()->last();
         $newHincha->create([ 
             'user_id'=>$usuarioId->id,
             'num_celular'=>$request['telefono'],
             'nombre'=>$request['nombre'],
-            'fecha_nacimiento'=>$request['fecha_nacimiento']
+            'fecha_nacimiento'=>$request['fecha_nacimiento'],
+            'path' =>$request['path']
 
             
             ]);

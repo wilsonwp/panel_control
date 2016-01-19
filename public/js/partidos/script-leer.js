@@ -153,7 +153,7 @@ $("#actMarcador").click(function(){
               
                 },
              success: function(){
-                 console.log('exito');
+                $("#myModal4").modal('toggle');
              },
             error: function(msj){
                console.log(msj.responseJSON.nombre);

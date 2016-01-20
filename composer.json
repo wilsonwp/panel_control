@@ -12,7 +12,8 @@
         "intervention/image": "2.*",
         "barryvdh/laravel-cors":" 0.7.*",
         "barryvdh/laravel-debugbar": "^2.1",
-        "tymon/jwt-auth": "0.5.*"
+        "tymon/jwt-auth": "0.5.*",
+        "davibennun/laravel-push-notification": "dev-laravel5"
     },
     "require-dev": {
         "pqb/filemanager-laravel": "2.*",

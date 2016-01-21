@@ -44,6 +44,7 @@ Route::get('select_estadio/{id}','PartidosController@get_estadio');
 Route::get('select_estatus/{id}','PartidosController@get_estatus');
 Route::get('partidos_live','PartidosController@partidos_live');
 Route::get('partidos_live_visitante','PartidosController@partidos_live_visitante');
+Route::get('equipos_list','HinchasController@equipos_list');
 Route::get('search_jugadores/{nombre}','JugadoresController@search_jugador');
 Route::get('partidos/setMarcador/{id}','PartidosController@setMarcador');
 Route::resource('noticias','NoticiasController');

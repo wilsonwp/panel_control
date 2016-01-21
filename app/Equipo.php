@@ -37,6 +37,9 @@ class Equipo extends Model
     public function goles(){
         return $this->hasMany('futboleros\Gol');
     }
+    public function hinchas(){
+        return $this->hasMany('futboleros\Hincha');
+    }
     public function setPathAttribute($path){
             if(!empty($path)){
               $name =$path->getClientOriginalName();

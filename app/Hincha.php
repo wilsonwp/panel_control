@@ -9,10 +9,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Hincha extends Model
 {
-   protected $fillable =['nombre','email','fecha_nacimiento','sexo','num_celular','user_id','path'];
+   protected $fillable =['nombre','email','fecha_nacimiento','sexo','num_celular','user_id','path','equipo_id'];
 
    public function usuario(){
    	return $this->belongsTo('\futboleros\User');
+   }
+    public function equipo(){
+    return $this->belongsTo('\futboleros\Equipo');
    }
    public function setPathAttribute($path){
             if(!empty($path)){

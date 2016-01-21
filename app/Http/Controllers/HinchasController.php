@@ -12,6 +12,8 @@ use Mail;
 use Illuminate\Routing\Route;
 use futboleros\Log;
 use futboleros\User;
+use futboleros\Equipo;
+use DB;
 
 
 class HinchasController extends Controller
@@ -27,7 +29,15 @@ class HinchasController extends Controller
     public function index()
     {
     }
-
+    public function equipos_list()
+    {
+      $equipos = DB::table('equipos')->get();
+        return response()->json(
+                $equipos
+                );
+      
+      
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -61,8 +71,9 @@ class HinchasController extends Controller
             'num_celular'=>$request['telefono'],
             'nombre'=>$request['nombre'],
             'fecha_nacimiento'=>$request['fecha_nacimiento'],
-            'path' =>$request['path']
-
+            'path' =>$request['path'],
+            'sexo'=>$request['sexo'],
+            'equipo_id'=>$request['equipo_id']
             
             ]);
 

@@ -30,6 +30,7 @@ class EquiposController extends Controller
       $equipos = Equipo::paginate(8);
       return view('equipos.index', ['equipos' => $equipos]);
     }
+    
 
     public function create()
     {

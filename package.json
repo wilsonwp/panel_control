@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "private": true,
   "devDependencies": {
    "gulp": "^3.9.0"
@@ -23,3 +24,15 @@
     "davibennun/laravel-push-notification": "dev-laravel5"
   }
 }
+=======
+	"name": "front-end",
+	"version": "0.1.0",
+	"deDependencies":{
+		"grunt": "~0.4.5",
+		"grunt-contib-jshint": "~0.10.0",
+		"grunt-contrib-concat": "~0.4.0",
+		"grunt-contrib-uglify": "~0.5.0",
+		"grunt-shell": "~0.5.0"
+	}
+}
+>>>>>>> eac52c91539a051320f384e175b88ae8e313830d

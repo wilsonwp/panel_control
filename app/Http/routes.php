@@ -52,7 +52,18 @@ Route::resource('arbitros','ArbitrosController');
 Route::resource('tecnicos','TecnicosController');
 Route::resource('comentarios','ComentariosController');
 Route::post('comentarios/store','ComentariosController@store');
+Route::get('newcomment',function(){
+
+	$comentario = \futboleros\Comentario::find(32);
+	event(new \futboleros\Events\ComentarioCreado($comentario));
+	return $comentario; 
+});
 Route::get('comentarios/show/{id}','ComentariosController@show');
+Route::get('hinchas/show/{correo}','HinchasController@show');
+
+Route::get('pruebaSocket/','PartidosController@pruebaSocket');
+
+
 Route::group(array('middleware' => ''), function(){
     Route::controller('filemanager', 'FilemanagerLaravelController');
 });
@@ -60,5 +71,7 @@ Route::group(['prefix' => 'api'], function()
 {
     Route::resource('authenticate', 'AuthenticateController', ['only' => ['index']]);
     Route::post('authenticate', 'AuthenticateController@authenticate');
+
 });
+Route::get('authenticate/show/{id}', 'AuthenticateController@show');
 Route::delete('/tecnicos/borrar/{id}','TecnicosController@borrar');

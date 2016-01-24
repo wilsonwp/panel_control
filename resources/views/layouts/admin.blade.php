@@ -81,6 +81,7 @@
     {!!Html::script('js/metisMenu.min.js')!!}
     {!!Html::script('js/sb-admin-2.js')!!}
     @yield('scripts')
+    
      
 </body>
 

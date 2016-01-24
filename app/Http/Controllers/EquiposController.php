@@ -12,6 +12,8 @@ use futboleros\Http\Requests;
 use futboleros\Http\Controllers\Controller;
 use Illuminate\Routing\Route;
 use futboleros\Log;
+use futboleros\Events\ComentarioCreado;
+use futboleros\Comentario;
 
 class EquiposController extends Controller
 {

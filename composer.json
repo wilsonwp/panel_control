@@ -12,8 +12,13 @@
         "intervention/image": "2.*",
         "barryvdh/laravel-cors":" 0.7.*",
         "barryvdh/laravel-debugbar": "^2.1",
+        "cboden/ratchet": "^0.3.3",
         "tymon/jwt-auth": "0.5.*",
-        "davibennun/laravel-push-notification": "dev-laravel5"
+        "davibennun/laravel-push-notification": "dev-laravel5",
+         "blainesch/prettyarray": "dev-master",
+        "predis/predis": "dev-master",
+        "pusher/pusher-php-server": "^2.2",
+        "vinkla/pusher": "^2.2"
     },
     "require-dev": {
         "pqb/filemanager-laravel": "2.*",

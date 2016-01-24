@@ -10,6 +10,7 @@ use futboleros\Log;
 use futboleros\Partido;
 use futboleros\EquipoPartido;
 use futboleros\Gol;
+use futboleros\Events\ComentarioCreado;
 
 class ComentariosController extends Controller
 {
@@ -45,6 +46,9 @@ class ComentariosController extends Controller
                       break;
               }  
            Comentario::create($request->all());
+            $last = Comentario::all()->last();
+           \Event::fire(new ComentarioCreado($last));
+
            return response()->json([
                
                "mensaje"=>"Comentario Creado con Exito"

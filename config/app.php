@@ -140,6 +140,7 @@ return [
         Barryvdh\Cors\ServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+        Vinkla\Pusher\PusherServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -198,6 +199,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+        'Pusher' => Vinkla\Pusher\Facades\Pusher::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,

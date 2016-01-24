@@ -21,6 +21,8 @@ use futboleros\Log;
 use futboleros\Gol;
 use futboleros\Resultado;
 use TipoComentario;
+use Vinkla\Pusher\Facades\Pusher;
+use futboleros\Events\ComentarioCreado;
 
 class PartidosController extends Controller
 {
@@ -56,6 +58,9 @@ class PartidosController extends Controller
       return view('partidos.index', ['partidos' => $partidos]);
       
       
+    }
+    public function pruebaPush(){
+       
     }
     public function partidos_live()
     {
@@ -228,4 +233,11 @@ class PartidosController extends Controller
         return Redirect::to('/partidos');
         
     }
+
+
+     public function pruebaSocket(){
+
+       return view('partidos.prueba_socket');
+    }
+
 }

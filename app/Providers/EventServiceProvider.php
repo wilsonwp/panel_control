@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'futboleros\Events\SomeEvent' => [
-            'futboleros\Listeners\EventListener',
+        'futboleros\Events\ComentarioCreado' => [
+            'futboleros\Handlers\Events\EnvioComentarioCreado',
         ],
     ];
 
